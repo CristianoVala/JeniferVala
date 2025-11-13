@@ -113,9 +113,16 @@ nav a:hover {
     width: 30vw;
     height: 30vw;
     padding: 1rem;
-    border-radius: 2rem;
+    border-radius: 50%;
 }
-
+@media screen and (max-width: 900px){
+    .Headshot{
+        width: 90vw;
+        height: 90vw;
+        padding: 1rem;
+        border-radius: 50%;
+    }
+}
 /* Section Layout */
 .container {
     width: 90%;
