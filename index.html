@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenifer Vala | Realtor - Coldwell Banker Ronan Realty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Jenifer Vala</h1>
+            <p class="subtitle">Realtor | Coldwell Banker Ronan Realty</p>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content fade-in">
+            <h2>Helping You Find Home</h2>
+            <p>Personalized real estate guidance with creativity, integrity, and care.</p>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <section id="about" class="container fade-in">
+        <h2>About Jenifer</h2>
+        <p>Born and raised in the city, Jenifer embraced country living in 2010, raising four amazing kids while working in local schools. With a background in style and design, she brings a unique eye for detail and transformation, helping clients see the true potential in every space.</p>
+        <p>Whether you're buying your dream home, preparing to sell with style, making a smart investment, or searching for the perfect rental, Jenifer is committed to delivering a personalized experience that puts your needs first.</p>
+        <p>As part of <strong>Coldwell Banker Ronan Realty</strong> and backed by a strong network of trusted professionals, Jenifer combines creativity, market knowledge, and integrity to guide clients every step of the way—from first impressions to final negotiations. Her passion is helping people achieve their real estate goals while adding value at every stage, highlighting what truly elevates a property.</p>
+    </section>
+
+    <section id="services" class="container fade-in">
+        <h2>What Jenifer Offers</h2>
+        <div class="service-grid">
+            <div class="service">
+                <h3>Buying</h3>
+                <p>Guiding you to find and secure your dream home with confidence and clarity.</p>
+            </div>
+            <div class="service">
+                <h3>Selling</h3>
+                <p>Helping you prepare, style, and market your property for maximum impact and value.</p>
+            </div>
+            <div class="service">
+                <h3>Investing</h3>
+                <p>Smart real estate strategies to help you grow your investment portfolio.</p>
+            </div>
+            <div class="service">
+                <h3>Rentals</h3>
+                <p>Finding the perfect rental property that fits your lifestyle and needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container fade-in">
+        <h2>Contact Jenifer</h2>
+        <p>Let's start your real estate journey today.</p>
+        <ul class="contact-info">
+            <li><strong>Email:</strong> <a href="mailto:jenifervala@ronanrealty.com">jenifervala@ronanrealty.com</a></li>
+            <li><strong>Office:</strong> 705-435-3506</li>
+            <li><strong>Cell:</strong> 416-200-3962</li>
+            <li><strong>Instagram & Facebook:</strong> 
+                <a href="https://www.instagram.com/jenifervala_realtor" target="_blank">@jenifervala_realtor</a>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Jenifer Vala | Coldwell Banker Ronan Realty</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fade-in animation when scrolling
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        fadeElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
