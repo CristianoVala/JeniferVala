@@ -102,6 +102,20 @@ nav a:hover {
     background-color: #ffd88c;
 }
 
+.Headshot_holder{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 1rem;
+}
+.Headshot{
+    width: 30vw;
+    height: 30vw;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
 /* Section Layout */
 .container {
     width: 90%;
