@@ -34,7 +34,12 @@ header .container {
     margin: auto;
     text-align: center;
 }
-
+.header__img{
+    width: 20vw;
+    height: 20vw;
+    padding: 1rem;
+    border-radius: 50%;
+}
 .subtitle {
     font-size: 1.1em;
     color: #d6e0f0;
