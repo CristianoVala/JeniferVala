@@ -35,10 +35,19 @@ header .container {
     text-align: center;
 }
 .header__img{
-    width: 20vw;
-    height: 20vw;
-    padding: 1rem;
+    width: 10vw;
+    height: 10vw;
+    padding: 0.1rem;
     border-radius: 50%;
+    position: relative;
+}
+@media screen and (max-width: 900px){
+    .header__img{
+        width: 40vw;
+        height: 40vw;
+        padding: 0.1rem;
+        border-radius: 50%;
+    }
 }
 .subtitle {
     font-size: 1.1em;
