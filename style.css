@@ -58,11 +58,14 @@ header .container {
     color: white;
     z-index: 10;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    text-align: center;
-    width: 100vw;
-    justify-content: center;
-    align-items:center;
+    padding: 1rem calc((50vw - 1600px) / 2);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:sticky;
+    top:0px;
+    text-align:center;
+    z-index:100;
 }
 
 nav ul {
@@ -80,6 +83,7 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
+    padding: 0.5rem;
 }
 
 nav a:hover {
