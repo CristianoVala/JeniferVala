@@ -2,5 +2,6 @@
 User-agent: *
 Disallow: 
 
-Sitemap: https://lightsoutsports.ca/sitemap.xml
+Sitemap: https://jenifervala.ca/sitemap.xml
+
 
