@@ -53,45 +53,67 @@ header .container {
     margin-bottom: 10px;
 }
 
-.navbar{
+/* Navbar container */
+.navbar {
     background-color: #1b2a49;
-    color: white;
-    z-index: 10;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    padding: 1rem calc((50vw - 1600px) / 2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position:sticky;
-    top:0px;
-    text-align:center;
-    z-index:100;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-nav ul {
+/* Navigation styling */
+.navbar nav ul {
     list-style: none;
-    padding: 0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    justify-content: center;   /* Centers links horizontally */
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    margin: 0;
 }
 
-nav ul li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-nav a {
-    color: white;
+/* Link styles */
+.navbar nav ul li a {
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-    padding: 0.5rem;
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 500;
+    transition: 0.2s ease;
 }
 
-nav a:hover {
-    color: #ffcc70;
+.navbar nav ul li a:hover {
+    opacity: 0.7;
 }
+
+/* Social icon container */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Style SVG icons */
+.social-icons svg {
+    transition: 0.2s ease;
+}
+
+.social-icons svg:hover {
+    opacity: 0.7;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+    .navbar nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .social-icons {
+        margin-top: 0.5rem;
+    }
+}
+
 
 /* Hero Section */
 #hero {
