@@ -192,6 +192,50 @@ h2 {
     text-align: center;
 }
 
+/* instagram posts */
+.instagram-carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.carousel-item iframe {
+  width: 100%;
+  height: 500px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #1b2a49;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+.prev:hover, .next:hover {
+  opacity: 1;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
 /* Services */
 .service-grid {
     display: grid;
