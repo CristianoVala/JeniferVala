@@ -195,9 +195,9 @@ h2 {
 /* instagram posts */
 .instagram-carousel {
   position: relative;
-  overflow: hidden;
-  max-width: 800px;
+  max-width: 600px; /* adjust max-width to fit your layout */
   margin: 2rem auto;
+  overflow: hidden;
 }
 
 .carousel-track {
@@ -208,19 +208,11 @@ h2 {
 .carousel-item {
   min-width: 100%;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* centers the Instagram post */
   padding: 0 10px;
 }
 
-.carousel-item iframe {
-  width: 40vw;
-  height: 45vw;
-}
-@media screen and (max-width: 900px){
-    .carousel-item iframe {
-      width: 90vw;
-      height: 100vw;
-    }
-}
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -240,6 +232,14 @@ h2 {
 
 .prev { left: 10px; }
 .next { right: 10px; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .carousel-item blockquote {
+    max-width: 100%;
+  }
+}
+
 
 /* Services */
 .service-grid {
