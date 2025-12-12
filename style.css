@@ -313,7 +313,7 @@ header h1 {
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    background: rgba(0,0,0,0.35);
+    background: #0a0a0a;
     border: 1px solid rgba(215,176,105,0.25); /* subtle gold edge */
     border-radius: 16px;
     padding: 50px 40px;
