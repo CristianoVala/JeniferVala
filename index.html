@@ -83,20 +83,34 @@
     </section>
 
     
-    <section class="instagram-carousel">
+    <section class="facebook-carousel">
   <div class="carousel-track">
-    <!-- Replace POST_ID with your Instagram post IDs -->
-      <div class="carousel-item">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DRzemK4jSVO/" data-instgrm-version="14" style="width:100%; max-width:540px; margin:0 auto;"></blockquote>
+    <div class="carousel-item">
+      <div class="fb-post" 
+           data-href="https://www.facebook.com/FacebookPage/r/17bmVH9LjR" 
+           data-width="500" 
+           data-show-text="true" 
+           data-autoplay="true" 
+           data-allowfullscreen="true">
+      </div>
     </div>
     <div class="carousel-item">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DR7bk5OAO-M/" data-instgrm-version="14" style="width:100%; max-width:540px; margin:0 auto;"></blockquote>
+      <div class="fb-post" 
+           data-href="https://www.facebook.com/share/r/19k75g8myY/" 
+           data-width="500" 
+           data-show-text="true" 
+           data-autoplay="true" 
+           data-allowfullscreen="true">
+      </div>
     </div>
     <div class="carousel-item">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DRmqQ1VgOlj/" data-instgrm-version="14" style="width:100%; max-width:540px; margin:0 auto;"></blockquote>
-    </div>
-    <div class="carousel-item">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DRfPyTyAAVl/" data-instgrm-version="14" style="width:100%; max-width:540px; margin:0 auto;"></blockquote>
+      <div class="fb-post" 
+           data-href="https://www.instagram.com/p/DRmqQ1VgOlj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" 
+           data-width="500" 
+           data-show-text="true" 
+           data-autoplay="true" 
+           data-allowfullscreen="true">
+      </div>
     </div>
   </div>
 
@@ -104,8 +118,9 @@
   <button class="next">&#10095;</button>
 </section>
 
-<!-- Instagram embed script -->
-<script async src="//www.instagram.com/embed.js"></script>
+<!-- Facebook SDK -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0"></script>
 
     
     <section id="contact" class="container fade-in">
@@ -144,24 +159,48 @@
 
     function updateCarousel() {
       track.style.transform = `translateX(-${index * 100}%)`;
+      controlFacebookVideos();
     }
 
     // Manual navigation
     prev.addEventListener('click', () => {
-      index = (index === 0) ? items.length - 1 : index - 1;
-      updateCarousel();
-    });
+          index = (index === 0) ? items.length - 1 : index - 1;
+          updateCarousel();
+        });
 
-    next.addEventListener('click', () => {
-      index = (index === items.length - 1) ? 0 : index + 1;
-      updateCarousel();
-    });
+        next.addEventListener('click', () => {
+          index = (index === items.length - 1) ? 0 : index + 1;
+          updateCarousel();
+        });
 
-    // Automatic sliding
-    setInterval(() => {
-      index = (index === items.length - 1) ? 0 : index + 1;
-      updateCarousel();
-    }, autoSlideInterval);
+        // Automatic sliding
+        setInterval(() => {
+          index = (index === items.length - 1) ? 0 : index + 1;
+          updateCarousel();
+        }, autoSlideInterval);
+
+        // Control Facebook videos
+        function controlFacebookVideos() {
+          items.forEach((item, i) => {
+            const iframe = item.querySelector('iframe');
+            if (iframe) {
+              if (i === index) {
+                // Play current video
+                iframe.contentWindow.postMessage(JSON.stringify({ 
+                  method: 'play' 
+                }), '*');
+              } else {
+                // Pause all other videos
+                iframe.contentWindow.postMessage(JSON.stringify({ 
+                  method: 'pause' 
+                }), '*');
+              }
+            }
+          });
+        }
+
+        // Initial load
+        updateCarousel();
     </script>
     
     <script>
