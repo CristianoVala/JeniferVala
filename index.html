@@ -150,58 +150,38 @@
 
     
     <script>
-    const track = document.querySelector('.carousel-track');
-    const items = document.querySelectorAll('.carousel-item');
-    const prev = document.querySelector('.prev');
-    const next = document.querySelector('.next');
+   const track = document.querySelector('.carousel-track');
+const items = document.querySelectorAll('.carousel-item');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
 
-    let index = 0;
-    const autoSlideInterval = 5000; // 5 seconds
+let index = 0;
+const autoSlideInterval = 5000; // 5 seconds
 
-    function updateCarousel() {
-      track.style.transform = `translateX(-${index * 100}%)`;
-      controlFacebookVideos();
-    }
+function updateCarousel() {
+  track.style.transform = `translateX(-${index * 100}%)`;
+}
 
-    // Manual navigation
-    prev.addEventListener('click', () => {
-          index = (index === 0) ? items.length - 1 : index - 1;
-          updateCarousel();
-        });
+// Manual navigation
+prev.addEventListener('click', () => {
+  index = (index === 0) ? items.length - 1 : index - 1;
+  updateCarousel();
+});
 
-        next.addEventListener('click', () => {
-          index = (index === items.length - 1) ? 0 : index + 1;
-          updateCarousel();
-        });
+next.addEventListener('click', () => {
+  index = (index === items.length - 1) ? 0 : index + 1;
+  updateCarousel();
+});
 
-        // Automatic sliding
-        setInterval(() => {
-          index = (index === items.length - 1) ? 0 : index + 1;
-          updateCarousel();
-        }, autoSlideInterval);
+// Automatic sliding
+setInterval(() => {
+  index = (index === items.length - 1) ? 0 : index + 1;
+  updateCarousel();
+}, autoSlideInterval);
 
-        // Control Facebook videos
-        function controlFacebookVideos() {
-          items.forEach((item, i) => {
-            const iframe = item.querySelector('iframe');
-            if (iframe) {
-              if (i === index) {
-                // Play current video
-                iframe.contentWindow.postMessage(JSON.stringify({ 
-                  method: 'play' 
-                }), '*');
-              } else {
-                // Pause all other videos
-                iframe.contentWindow.postMessage(JSON.stringify({ 
-                  method: 'pause' 
-                }), '*');
-              }
-            }
-          });
-        }
+// Initial load
+updateCarousel();
 
-        // Initial load
-        updateCarousel();
     </script>
     
     <script>
