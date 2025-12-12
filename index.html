@@ -83,35 +83,6 @@
     </section>
 
     
-    <section class="facebook-carousel">
-  <div class="carousel-track">
-    <!-- Replace POST_ID with your actual Facebook post IDs -->
-    <div class="carousel-item">
-      <div class="fb-post">
-          <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2108425779960362%2F&show_text=false&t=0" width="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="fb-post" >
-           <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F25182171381444194%2F&show_text=false&t=0" width="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" ></iframe>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="fb-post">
-           <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1481646489729307%2F&show_text=false&t=0" width="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-      </div>
-    </div>
-  </div>
-
-  <button class="prev">&#10094;</button>
-  <button class="next">&#10095;</button>
-</section>
-
-<!-- Facebook SDK -->
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0"></script>
-
-    
     <section id="contact" class="container fade-in">
         <h2>Contact Jenifer</h2>
         <ul class="contact-info">
@@ -136,41 +107,6 @@
      </style>
     </footer>
 
-    
-    <script>
-   const track = document.querySelector('.carousel-track');
-const items = document.querySelectorAll('.carousel-item');
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
-
-let index = 0;
-const autoSlideInterval = 5000; // 5 seconds
-
-function updateCarousel() {
-  track.style.transform = `translateX(-${index * 100}%)`;
-}
-
-// Manual navigation
-prev.addEventListener('click', () => {
-  index = (index === 0) ? items.length - 1 : index - 1;
-  updateCarousel();
-});
-
-next.addEventListener('click', () => {
-  index = (index === items.length - 1) ? 0 : index + 1;
-  updateCarousel();
-});
-
-// Automatic sliding
-setInterval(() => {
-  index = (index === items.length - 1) ? 0 : index + 1;
-  updateCarousel();
-}, autoSlideInterval);
-
-// Initial load
-updateCarousel();
-
-    </script>
     
     <script>
         // Smooth scroll for anchor links
