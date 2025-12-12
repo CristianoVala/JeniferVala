@@ -115,142 +115,134 @@ header .container {
 }
 
 
-/* Hero Section */
-#hero {
+/* Luxury Hero */
+.luxury-hero {
     position: relative;
-    background: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1400&q=80')
+    background: url('https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?auto=format&fit=crop&w=1600&q=80')
         no-repeat center center/cover;
-    height: 75vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    padding: 0 25px;
     text-align: center;
-    padding: 0 20px;
+    color: #fff;
+    font-family: "Playfair Display", serif;
 }
 
-.hero-overlay {
+/* Subtle dark luxury overlay */
+.luxury-hero .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(15, 23, 42, 0.55);
-    backdrop-filter: blur(2px);
+    background: rgba(10, 10, 10, 0.55);
+    backdrop-filter: blur(1.5px);
 }
 
+/* Content */
 .hero-content {
     position: relative;
-    max-width: 750px;
-    padding: 50px 40px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    padding: 45px 40px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 215, 140, 0.25); /* refined gold border */
+    border-radius: 14px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
+/* Luxury heading */
 .hero-content h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 3.2rem;
     font-weight: 700;
-    letter-spacing: 1px;
+    color: #f9f7f3;
+    margin-bottom: 18px;
 }
 
+/* Elegant body text */
 .hero-content p {
     font-size: 1.25rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    color: #f1f1f1;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+    color: #e8e6e3;
+    margin-bottom: 28px;
 }
 
+/* Luxury button */
 .btn {
     display: inline-block;
-    background: linear-gradient(135deg, #ffd28c, #ffb347);
-    color: #1b1b1b;
+    padding: 14px 36px;
+    font-size: 1.1rem;
     font-weight: 600;
-    padding: 14px 35px;
+    font-family: "Inter", sans-serif;
+    color: #1a1a1a;
+    background: linear-gradient(135deg, #f1d39b, #d5a95b);
     border-radius: 8px;
     text-decoration: none;
-    font-size: 1.05rem;
     transition: all 0.3s ease;
+    letter-spacing: 0.4px;
 }
 
 .btn:hover {
-    background: linear-gradient(135deg, #ffe0aa, #ffc278);
+    background: linear-gradient(135deg, #f6e3bb, #e0b974);
     transform: translateY(-3px);
 }
 
-/* Fade-in animation */
+/* Fade animation */
 .fade-in {
-    animation: fadeInUp 1s ease forwards;
+    animation: fadeInUp 1.1s ease forwards;
     opacity: 0;
 }
 
 @keyframes fadeInUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    0% { transform: translateY(25px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
 }
 
-
-/* -----------------------------------------------------
-   📱 MOBILE OPTIMIZATION
------------------------------------------------------ */
-
+/* --------------------------------------------
+   📱 MOBILE OPTIMIZATION (luxury responsive)
+-------------------------------------------- */
 @media (max-width: 768px) {
-    #hero {
-        height: 65vh;
+    .luxury-hero {
+        height: 70vh;
         padding: 0 15px;
     }
 
     .hero-content {
         padding: 30px 25px;
-        max-width: 90%;
     }
 
     .hero-content h2 {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
     }
 
     .hero-content p {
         font-size: 1.1rem;
-        margin-bottom: 20px;
     }
 
     .btn {
-        padding: 12px 28px;
+        padding: 12px 26px;
         font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    #hero {
+    .luxury-hero {
         height: 60vh;
-    }
-
-    .hero-content {
-        padding: 25px 20px;
     }
 
     .hero-content h2 {
         font-size: 1.9rem;
-        line-height: 1.2;
     }
 
-    .hero-content p {
-        font-size: 1rem;
+    .hero-content {
+        padding: 24px 20px;
     }
 
     .btn {
         width: 100%;
         padding: 12px 0;
-        font-size: 1rem;
-        border-radius: 6px;
     }
 }
 
