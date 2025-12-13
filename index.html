@@ -64,32 +64,22 @@
 
     <form 
         class="mls-form"
-        action="https://ronanrealty.com/mapped-real-estate-properties/"
+        action="https://ronanrealty.com/mapped-real-estate-properties/layout=grid&"
         method="get"
         target="_blank"
     >
         <input
             type="text"
-            name="location"
-            placeholder="City, neighborhood, or ZIP code"
-            aria-label="Location"
+            name="townvillage_name"
+            placeholder="City / Town"
+            aria-label="townvillage_name"
         >
-
-        <select name="property_type" aria-label="Property Type">
-            <option value="">Property Type</option>
-            <option value="single-family">Single Family</option>
-            <option value="condo">Condo</option>
-            <option value="townhome">Townhome</option>
-            <option value="multi-family">Multi-Family</option>
-        </select>
-
-        <select name="price_range" aria-label="Price Range">
-            <option value="">Price Range</option>
-            <option value="0-300000">Under $300k</option>
-            <option value="300000-600000">$300k – $600k</option>
-            <option value="600000-1000000">$600k – $1M</option>
-            <option value="1000000+">$1M+</option>
-        </select>
+        <input
+            type="text"
+            name="search"
+            placeholder="ID# / Adress / Keyword"
+            aria-label="search"
+        >
 
         <button type="submit">Search Listings</button>
     </form>
