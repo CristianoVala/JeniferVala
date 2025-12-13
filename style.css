@@ -294,14 +294,14 @@ header h1 {
     margin: 90px auto;
     text-align: center;
     font-family: "Inter", sans-serif;
-    color: #e8e6e3;
+    color: #0d0d0d;
 }
 
 /* Heading */
 .mls-search h2 {
     font-family: "Playfair Display", serif;
-    font-size: 2.6rem;
-    color: #f9f7f3;
+    font-size: 1.5rem;
+    color: #0d0d0d;
     margin-bottom: 35px;
     letter-spacing: 0.6px;
 }
@@ -327,12 +327,12 @@ header h1 {
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.2);
     border-radius: 8px;
-    color: #f5f4f0;
+    color: #0d0d0d;
     outline: none;
 }
 
 .mls-form input::placeholder {
-    color: rgba(245,244,240,0.6);
+    color: #3B3B3B;
 }
 
 /* Dropdown arrow color */
