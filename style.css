@@ -284,6 +284,101 @@ header h1 {
     }
 }
 
+/* =====================================================
+   MLS SEARCH BAR (LUXURY STYLE)
+===================================================== */
+
+.mls-search {
+    width: 90%;
+    max-width: 1100px;
+    margin: 90px auto;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    color: #e8e6e3;
+}
+
+/* Heading */
+.mls-search h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.6rem;
+    color: #f9f7f3;
+    margin-bottom: 35px;
+    letter-spacing: 0.6px;
+}
+
+/* Form container */
+.mls-form {
+    display: flex;
+    gap: 1.2rem;
+    padding: 30px;
+    background: rgba(0,0,0,0.35);
+    border: 1px solid rgba(215,176,105,0.25);
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+    backdrop-filter: blur(3px);
+}
+
+/* Inputs & selects */
+.mls-form input,
+.mls-form select {
+    flex: 1;
+    padding: 14px 16px;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    color: #f5f4f0;
+    outline: none;
+}
+
+.mls-form input::placeholder {
+    color: rgba(245,244,240,0.6);
+}
+
+/* Dropdown arrow color */
+.mls-form select {
+    appearance: none;
+    background-image:
+        linear-gradient(45deg, transparent 50%, #d5b16b 50%),
+        linear-gradient(135deg, #d5b16b 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) 50%,
+        calc(100% - 15px) 50%;
+    background-size: 5px 5px;
+    background-repeat: no-repeat;
+}
+
+/* Button */
+.mls-form button {
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #f1d39b, #d5a95b);
+    color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mls-form button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #f6e3bb, #e0b974);
+}
+
+/* -----------------------------------
+   MOBILE RESPONSIVE
+----------------------------------- */
+
+@media (max-width: 900px) {
+    .mls-form {
+        flex-direction: column;
+    }
+
+    .mls-form button {
+        width: 100%;
+    }
+}
 
 /* -----------------------------------
    LUXURY ABOUT SECTION
