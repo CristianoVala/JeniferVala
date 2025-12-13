@@ -64,7 +64,7 @@
 
     <form 
         class="mls-form"
-        action="https://ronanrealty.com/mapped-real-estate-properties/layout=grid&"
+        action="https://ronanrealty.com/mapped-real-estate-properties/"
         method="get"
         target="_blank"
     >
@@ -80,7 +80,10 @@
             placeholder="ID# / Adress / Keyword"
             aria-label="search"
         >
-
+        <!-- Hidden parameters -->
+        <input type="hidden" name="doing_wp_cron" value="1765643950.3965330123901367187500">
+        <input type="hidden" name="layout" value="grid">
+        
         <button type="submit">Search Listings</button>
     </form>
 
