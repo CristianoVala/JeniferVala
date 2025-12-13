@@ -415,7 +415,7 @@ header h1 {
     text-align: center;
     font-family: "Playfair Display", serif;
     font-size: 2.8rem;
-    color: #f9f7f3;
+    color: #0d0d0d;
     margin-bottom: 55px;
     letter-spacing: 0.6px;
 }
@@ -446,7 +446,7 @@ header h1 {
 .why-item p {
     font-size: 1.08rem;
     line-height: 1.75;
-    color: #e6e4e1;
+    color: #0d0d0d;
     max-width: 500px;
 }
 
