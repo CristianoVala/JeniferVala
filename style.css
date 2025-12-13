@@ -379,6 +379,12 @@ header h1 {
         width: 100%;
     }
 }
+.mls-note {
+    margin-top: 14px;
+    font-size: 0.9rem;
+    color: rgba(232,230,227,0.7);
+    font-style: italic;
+}
 
 /* -----------------------------------
    LUXURY ABOUT SECTION
