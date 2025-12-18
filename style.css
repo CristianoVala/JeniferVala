@@ -284,22 +284,6 @@ header h1 {
     }
 }
 
-/* =====================================================
-   MLS Listings (LUXURY STYLE)
-===================================================== */
-
-.iframe_Wrapper{
-    width: 100vw;
-    height: 40vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-}
-
-.iframe_Wrapper iframe{
-    
-}
 /* -----------------------------------
    LUXURY ABOUT SECTION
 ----------------------------------- */
